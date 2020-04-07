@@ -225,53 +225,53 @@ function printallWestonrestaurants() {
 //  ALL LC RESTAURANTS, IF CALLED. 
 //  (NOT IN USE CURRENTLY)
 
+console.log('printallWestonRestaurants Triggered!');
+
 for (const key of WestonEats) {
 
-    let URL = JSON.stringify(key.name).replace(/[&'"]+/g, '') //REMOVES & , ', and " from any entries for URL-generation compatibility 
+    let URL = JSON.stringify(key.name).replace(/[&'"]+/g, ''); //REMOVES & , ', and " from any entries for URL-generation compatibility 
+    var select = document.getElementById("mySelect"); //Used by fillSelectElement()
+var select_option = document.createElement("option"); //Used by fillSelectElement()
+    select_option.text = URL;
+    console.log(URL)
+    select.add(select_option);
 
-    document.write("<br />")
 
-    document.write('<a href="' + URL + '.html">' + key.name + '</a>')
-    }
-}
-
+   // document.write("<br />");
+   //document.write('<a href="' + URL + '.html">' + key.name + '</a>')
+    };
+};
 
 function generate_homepage() {
 //  CODING BELOW BEGINS CREATING 
 //      THE PAGE LAYOUT!!!
 
     document.open();
-document.write("<h1>ConnectLC Home</h1>")
+    document.write("<h1>ConnectLC Home</h1>");
+    document.write(
+        "<strong>Weston has the following restaurant options.</strong>"
+      );
 
-document.write(
-    "<strong>Weston has the following restaurant options.</strong>"
-    )
-document.write("<br />")
+document.write("<br />");
 
-document.write("<select id=\"mySelect\" size=\"8\"><option>Apple</option><option>Pear</option><option>Banana</option><option>Orange</option></select>")
+document.write("<select id=\"mySelect\" size=\"7\"></select>");
 
-printallWestonrestaurants()
+printallWestonrestaurants();
 
 
-document.write("<br /><br />")
+document.write("<br /><br />");
 document.write(
     "<strong>Jane Lew has the following restaurant options.</strong>"
-    )
-document.write("<br /> Please choose the one you'd like to see a menu for")
-document.write("<br />")
+    );
+document.write("<br /> Please choose the one you'd like to see a menu for");
+document.write("<br />");
 
 printallJLrestaurants()
 
-function fillSelectElement() {
-    var x = document.getElementById("mySelect");
-    var option = document.createElement("option");
-    option.text = "Kiwi";
-    x.add(option);
-    console.log('fillSelectElement Triggered!');
-  }
+// VARIABLE DECLARATIONS FOLLOW:
+var select = document.getElementById("mySelect"); //Used by fillSelectElement()
+var select_option = document.createElement("option"); //Used by fillSelectElement()
 
-
-fillSelectElement();
 
 }
 
