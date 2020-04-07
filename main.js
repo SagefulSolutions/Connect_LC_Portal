@@ -210,38 +210,6 @@ function printallrestaurants() {
     }
   }
 
-function printallJLrestaurants() {
-  for (const key of JaneLewEats) {
-    let URL = JSON.stringify(key.name).replace(/['"]+/g, '')
-    document.write("<br />")
-    document.write('<a href="' + URL + '.html">' + key.name + '</a>')
-    
-  }
-
-}
-
-function printallWestonrestaurants() {
-//  THIS FUNCTION CAN PRINT A LIST OF 
-//  ALL LC RESTAURANTS, IF CALLED. 
-//  (NOT IN USE CURRENTLY)
-
-console.log('printallWestonRestaurants Triggered!');
-
-for (const key of WestonEats) {
-
-    let URL = JSON.stringify(key.name).replace(/[&'"]+/g, ''); //REMOVES & , ', and " from any entries for URL-generation compatibility 
-    var select = document.getElementById("mySelect"); //Used by fillSelectElement()
-var select_option = document.createElement("option"); //Used by fillSelectElement()
-    select_option.text = URL;
-    console.log(URL)
-    select.add(select_option);
-
-
-   // document.write("<br />");
-   //document.write('<a href="' + URL + '.html">' + key.name + '</a>')
-    };
-};
-
 function generate_homepage() {
 //  CODING BELOW BEGINS CREATING 
 //      THE PAGE LAYOUT!!!
@@ -251,28 +219,55 @@ function generate_homepage() {
     document.write(
         "<strong>Weston has the following restaurant options.</strong>"
       );
+    document.write("<br /> Please choose the one you'd like to see a menu for");
+    document.write("<br />");
+    document.write("<select id=\"WestonSelect\" size=\"7\"></select>");
+    listallWestonrestaurants();
 
-document.write("<br />");
+    document.write("<br /><br />");
 
-document.write("<select id=\"mySelect\" size=\"7\"></select>");
-
-printallWestonrestaurants();
-
-
-document.write("<br /><br />");
-document.write(
+    document.write(
     "<strong>Jane Lew has the following restaurant options.</strong>"
     );
-document.write("<br /> Please choose the one you'd like to see a menu for");
-document.write("<br />");
-
-printallJLrestaurants()
+    document.write("<br /> Please choose the one you'd like to see a menu for");
+    document.write("<br />");
+    document.write("<select id=\"JLSelect\" size=\"7\"></select>");
+    listallJLrestaurants()
 
 // VARIABLE DECLARATIONS FOLLOW:
-var select = document.getElementById("mySelect"); //Used by fillSelectElement()
+var select = document.getElementById("JLSelect"); //Used by fillSelectElement()
 var select_option = document.createElement("option"); //Used by fillSelectElement()
 
 
 }
 
 generate_homepage();
+
+function listallWestonrestaurants() {
+
+  console.log('listallWestonRestaurants Triggered! You should have a nice selectable list');
+  
+  for (const key of WestonEats) {
+  
+      let URL = key.name 
+      var select = document.getElementById("WestonSelect"); //Used by fillSelectElement()
+  var select_option = document.createElement("option"); //Used by fillSelectElement()
+      select_option.text = URL;
+      select.add(select_option);
+
+      };
+  };
+  
+  function listallJLrestaurants() {
+    console.log('listallJLRestaurants Triggered! You should have a nice selectable list');
+  
+    for (const key of JaneLewEats) {
+      let URL = key.name 
+      var select = document.getElementById("JLSelect"); //Used by fillSelectElement()
+  var select_option = document.createElement("option"); //Used by fillSelectElement()
+      select_option.text = URL;
+      select.add(select_option);
+      
+    }
+  
+  }
