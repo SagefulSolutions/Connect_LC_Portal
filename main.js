@@ -75,13 +75,13 @@ const eats = [
           'Liver and Onions': {description: 'Liver and onions and two sides', Price: 12.95},
           'Shrimp': {description: 'Shrimp - breaded or grilled w/fries & slaw and two sides', Price: 12.95},
           'Chicken Tenders': {description: 'Chicken Tenders and two sides', Price: 12.95},
-        } 
+        },
       farm_and_sea:
         {
           '12 oz Center Cut Ribeye': {description: '12 oz center cut ribeye and two sides', Price: 22.95},
           '18 oz Center Cut NY Strip': {description: '18 oz center cut NY strip and two sides', Price: 19.95},
           '8 oz Atlantic Salmon': {description: 'Atlantic salmon cajun dry rub or sesame ginger glaze and two sides', Price: 18.95},
-        }
+        },
       sammiches:
         {
           'Giovanni Special': {description: '', Price: 12.95},
@@ -96,7 +96,7 @@ const eats = [
           'Hot Roast Beef & Country Fried Steak': {description: '', Price: 12.95},
           'Hot Dog': {description: '', Price: 2.25},
           'Slaw Dog': {description: '', Price: 2.95},
-        }
+        },
       pizza_and_calzones:
         {
           '5 Toppings Full Zone': {description: '', Price: 10.95},
