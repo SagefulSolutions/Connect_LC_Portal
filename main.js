@@ -6,35 +6,35 @@ const eats = [
     city: 'Weston',
     category: 'Home-cooking',
     menu: {
-      EarlyMorninFixins: 
+      early_mornin_fixins: 
         {
-            'Sharon Sunrise': {Description: '', Price: 6.95},
-            'JR Jumbo': {Description: '', Price: 8.95},
-            'Jackie Stack': {Description: '', Price: 5.95},
-            'French Toast': {Description: '', Price: 5.95},
-            'Harold Special': {Description: '', Price: 2.95},
-            'Cheese Omelet': {Description: '', Price: 3.95},
-            'Supreme Omelet': {Description: '', Price: 7.95},
-            'Biscuit & Sausage Gravy': {Description: '', Price: 2.95}
+            'Sharon Sunrise': {description: '', Price: 6.95},
+            'JR Jumbo': {description: '', Price: 8.95},
+            'Jackie Stack': {description: '', Price: 5.95},
+            'French Toast': {description: '', Price: 5.95},
+            'Harold Special': {description: '', Price: 2.95},
+            'Cheese Omelet': {description: '', Price: 3.95},
+            'Supreme Omelet': {description: '', Price: 7.95},
+            'Biscuit & Sausage Gravy': {description: '', Price: 2.95}
         },
-      SharedPlates:
+      shared_plates:
         {
-            'Onion Petals': {Description: '', Price: 3.95},
-            'Mozz Stix': {Description: '', Price: 4.95},
-            'Jalepeno Stix': {Description: '', Price: 4.95},
-            'Breaded Mushrooms': {Description: '', Price: 4.95},
-            'Fried Green Tomatoes': {Description: '', Price: 5.95},
-            'Fried Pickle Chips': {Description: '', Price: 5.95},
-            'Battered Zuchini Strips': {Description: '', Price: 6.95},
-            'Breaded or Naked Chicken Wings': {Description: '', Price: 3.95},
-            'Chicken Wings Tossed in buffalo, honey hot, bbq, or general tso': {Description: '', Price: 4.95},
-            'Chicken Tenders': {Description: '', Price: 5.95},
-            'Chicken Parm': {Description: '', Price: 7.95},
-            'Pizza Burger': {Description: '', Price: 4.95},
-            'Bacon OR Chili Cheese Fries (small)': {Description: '', Price: 6.95},
-            'Bacon OR Chili Cheese Fries (large)': {Description: '', Price: 8.95}
+            'Onion Petals': {description: '', Price: 3.95},
+            'Mozz Stix': {description: '', Price: 4.95},
+            'Jalepeno Stix': {description: '', Price: 4.95},
+            'Breaded Mushrooms': {description: '', Price: 4.95},
+            'Fried Green Tomatoes': {description: '', Price: 5.95},
+            'Fried Pickle Chips': {description: '', Price: 5.95},
+            'Battered Zuchini Strips': {description: '', Price: 6.95},
+            'Breaded or Naked Chicken Wings': {description: '', Price: 3.95},
+            'Chicken Wings Tossed in buffalo, honey hot, bbq, or general tso': {description: '', Price: 4.95},
+            'Chicken Tenders': {description: '', Price: 5.95},
+            'Chicken Parm': {description: '', Price: 7.95},
+            'Pizza Burger': {description: '', Price: 4.95},
+            'Bacon OR Chili Cheese Fries (small)': {description: '', Price: 6.95},
+            'Bacon OR Chili Cheese Fries (large)': {description: '', Price: 8.95}
         },
-      FarmToTableBurgers:
+      farm_to_table_burgers:
         {
             'Hamburger': {description: 'Fresh angus beef, topped with ketchup, mustard, onion, pickle, lettuce, tomato & mayo', price: 4.50},
             'Double Hamburger': {description: 'Fresh angus beef, topped with ketchup, mustard, onion, pickle, lettuce, tomato & mayo', price: 7.50},
@@ -45,15 +45,25 @@ const eats = [
             'Mountaineer Hero': {description: 'Mozzarella cheese, grilled onions, mushrooms & brown gravy', price: 6.95},
             'Wimpy': {description: 'Cheddar jack cheese, bacon, grilled onions, mushrooms & garlic aioli', price: 6.95}
         },
-      Sides:
+      sides:
         { 
-
+          'French Fries': {description: '', Price: 2.95},
+          'Cottage Cheese': {description: '', Price: 2.95},
+          'Slaw': {description: '', Price: 2.95},
+          'Peaches': {description: '', Price: 2.95},
+          'Pineapple': {description: '', Price: 2.95},
+          'Veggies': {description: '', Price: 2.95},
+          'Onion Rings': {description: '', Price: 3.95},
+          'Sweet Potato Fries': {description: '', Price: 3.95},
+          'Sidewinder Fries': {description: '', Price: 3.95},
+          'Tossed Salad': {description: '', Price: 3.95},
+          'Mac n Cheese': {description: '', Price: 4.95},
         },
-      Salads:
+      salads:
         {
 
         },
-      DinnDinn:
+      dinn_dinn:
         {
 
         } 
