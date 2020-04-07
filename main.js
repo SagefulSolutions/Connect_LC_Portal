@@ -82,7 +82,37 @@ const eats = [
           '18 oz Center Cut NY Strip': {description: '18 oz center cut NY strip and two sides', Price: 19.95},
           '8 oz Atlantic Salmon': {description: 'Atlantic salmon cajun dry rub or sesame ginger glaze and two sides', Price: 18.95},
         }
-              //: {description: ' and two sides', Price: 12.95}, (copypasta::)
+      sammiches:
+        {
+          'Giovanni Special': {description: '', Price: 12.95},
+          'Grilled Chicken': {description: '', Price: 12.95},
+          'Fried Fish': {description: '', Price: 12.95},
+          'Chicken Salad': {description: '', Price: 12.95},
+          'BLT': {description: '', Price: 12.95},
+          'Ham & Cheese': {description: '', Price: 12.95},
+          'Ribeye Steak': {description: '', Price: 12.95},
+          'Grilled Cheese': {description: '', Price: 12.95},
+          'Club': {description: '', Price: 12.95},
+          'Hot Roast Beef & Country Fried Steak': {description: '', Price: 12.95},
+          'Hot Dog': {description: '', Price: 2.25},
+          'Slaw Dog': {description: '', Price: 2.95},
+        }
+      pizza_and_calzones:
+        {
+          '5 Toppings Full Zone': {description: '', Price: 10.95},
+          '1 Topping Full Zone': {description: '', Price: 7.95},
+          '5 Toppings Half Zone': {description: '', Price: 7.95},
+          '1 Topping Half Zone': {description: '', Price: 5.95},
+          '5 Toppings 12x16in Rectangle Pizza': {description: '', Price: 19.95},
+          '1 Topping 12x16in Rectangle Pizza': {description: '', Price: 13.95},
+          '5 Toppings 12in Round Pizza': {description: '', Price: 13.95},
+          '1 Topping 12in Round Pizza': {description: '', Price: 9.95},
+          '5 Toppings 4-slice Half Pizza': {description: '', Price: 7.95},
+          '1 Topping 4-slice Half Pizza': {description: '', Price: 5.95},
+          '5 Toppings Cauliflower GF/Low Carb': {description: '', Price: 13.95},
+          '1 Topping Cauliflower GF/Low Carb': {description: '', Price: 9.95},
+        }
+              //: {description: '', Price: 12.95}, (copypasta::)
     }
   },
   {
