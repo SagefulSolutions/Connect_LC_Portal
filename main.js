@@ -118,53 +118,68 @@ const eats = [
   {
     name: 'Ginos',
     category: 'Italian Cousine',
-    city: 'Weston'
+    city: 'Weston',
+    menu: {}
   },
   {
     name: 'Dominos',
     category: 'Pizza, Pasta and Sandwiches',
-    city: 'Weston'
+    city: 'Weston',
+    menu: {}
   },
   {
     name: 'T&L Hotdogs',
     category: 'Hot dogs',
-    city: 'Weston'
+    city: 'Weston',
+    menu: {}
   },
   {
     name: 'Flying Dogs',
     city: 'Weston',
-    category: 'Hot dogs'
+    category: 'Hot dogs',
+    menu: {}
   },
   {
     name: 'Patron',
     city: 'Weston',
-    category: "Mexican-American Cousine"
+    category: "Mexican-American Cousine",
+    menu: {}
   },
   {
     name: 'Hickory House',
     city: 'Weston',
-    category: "The best BBQ"
+    category: "The best BBQ",
+    menu: {}
   },
   {
     name: 'Main Street Cafe',
     city: 'Jane Lew',
-    category: 'Home-cooking'
+    category: 'Home-cooking',
+    menu: {}
   },
   {
     name: 'Robin\'s Nest',
-    city: 'Jane Lew'
+    city: 'Jane Lew',
+    category: '',
+    menu: {}
   },
   {
     name: 'The Service Station',
-    city: 'Jane Lew'
+    city: 'Jane Lew',
+    category: '',
+    menu: {}
   },
   {
     name: 'Lightburn\'s',
-    city: 'Jane Lew'
+    city: 'Jane Lew',
+    category: '',
+    menu: {}
   },
   {
     name: 'Flying Dogs',
-    city: 'Jane Lew'
+    city: 'Jane Lew',
+    category: '',
+    menu: {}
   },
 ]
 
@@ -172,6 +187,7 @@ const eats = [
 // RESTAURANTS AS THEIR NAMES
 // FROM const eats above ^^^
     let giovannis = eats[0]
+    let giomenu = eats[0].menu
     let ginos = eats[1]
     let dominos = eats[2]
     let tlhotdogs = eats[3]
@@ -201,6 +217,9 @@ const eats2 = eats.filter((eats) => {
 })
 const keys = Object.values(JLEatsNames)
 
+const giovannismenu = Object.keys(giomenu)
+const gioearlyfixins = Object.values(giovannis)
+
 function printallrestaurants() {
     document.open();
     console.log("clear should have happened");
@@ -221,7 +240,8 @@ function generate_homepage() {
       );
     document.write("<br /> Please choose the one you'd like to see a menu for");
     document.write("<br />");
-    document.write("<select id=\"WestonSelect\" size=\"7\" onchange=\"WestonSelectAlert();\"></select>");
+    document.write("<select id=\"WestonSelect\" size=\"7\" onchange=\"WestonSelectMenu();\"></select>");
+   
     listallWestonrestaurants();
 
     document.write("<br /><br />");
@@ -231,12 +251,14 @@ function generate_homepage() {
     );
     document.write("<br /> Please choose the one you'd like to see a menu for");
     document.write("<br />");
-    document.write("<select id=\"JLSelect\" size=\"5\" onchange=\"JLSelectAlert();\"></select>");
+    document.write("<select id=\"JLSelect\" size=\"5\" onchange=\"JLSelectMenu();\"></select>");
+    document.write("<select id=\"JLMenuSelect\" size=\"5\"></select>");
+   
     listallJLrestaurants()
 
 // VARIABLE DECLARATIONS FOLLOW:
-var select = document.getElementById("JLSelect"); //Used by fillSelectElement() 
-var select_option = document.createElement("option"); //Used by fillSelectElement()
+var select = document.getElementById("JLSelect");  
+var select_option = document.createElement("option"); 
 }
 
 generate_homepage();
@@ -244,10 +266,10 @@ generate_homepage();
 function listallWestonrestaurants() {
   console.log('listallWestonRestaurants Triggered! You should have a nice selectable list!');
   for (const key of WestonEats) {
-        let URL = key.name 
-      var select = document.getElementById("WestonSelect"); //Used by fillSelectElement()
-  var select_option = document.createElement("option"); //Used by fillSelectElement()
-      select_option.text = URL;
+        let restName = key.name
+      var select = document.getElementById("WestonSelect"); 
+  var select_option = document.createElement("option"); 
+      select_option.text = restName;
       select.add(select_option);
       };
   };
@@ -255,26 +277,40 @@ function listallWestonrestaurants() {
   function listallJLrestaurants() {
     console.log('listallJLRestaurants Triggered! You should have a nice selectable list!');
     for (const key of JaneLewEats) {
-      let URL = key.name 
-      var select = document.getElementById("JLSelect"); //Used by fillSelectElement()
-  var select_option = document.createElement("option"); //Used by fillSelectElement()
-      select_option.text = URL;
+      let restName = key.name 
+      var select = document.getElementById("JLSelect"); 
+  var select_option = document.createElement("option"); 
+      select_option.text = restName;
       select.add(select_option); 
     }
   }
 
-  function WestonSelectAlert() {
+  function WestonSelectMenu() {
     var selectBox = document.getElementById("WestonSelect");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
     alert(selectedValue);
   }
 
-  function JLSelectAlert() {
+  function JLSelectMenu() {
     var selectBox = document.getElementById("JLSelect");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    alert(selectedValue);
+    alert(JSON.stringify(selectedValue));
   }
 
+
+  test = giovannis.menu.early_mornin_fixins
   function MenuCreation() {
-    document.write()
+    console.log('MenuCreation Triggered!'); 
+    for (const key of JaneLewEats) {
+      let URL = key.name 
+      var select = document.getElementById("JLMenuSelect"); 
+  var select_option = document.createElement("option"); 
+      select_option.text = URL;
+      select.add(select_option); 
+   
   }
+}
+
+document.write(giovannismenu)
+
+MenuCreation();
