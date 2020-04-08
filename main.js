@@ -133,6 +133,11 @@ const eats = [
     category: 'Fine Dining & Cousine all the thyme'
   },
   {
+    name: 'West Fork Eatery',
+    city: 'Weston',
+    category: 'Home Cooking'
+  },
+  {
     name: 'T&L Hotdogs',
     city: 'Weston',
     category: 'Hot dogs'
