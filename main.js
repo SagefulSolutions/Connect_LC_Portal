@@ -302,6 +302,6 @@ generate_homepage();
 
 MenuCreation();
 
-cl(typeof giomenu);
-cl(giomenu_early_mornin_fixins)
-cl(giomenu_shared_plates)
+//cl(typeof giomenu);
+//cl(giomenu_early_mornin_fixins)
+//cl(giomenu_shared_plates)
