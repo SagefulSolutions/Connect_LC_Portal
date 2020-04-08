@@ -128,9 +128,9 @@ const eats = [
     category: 'Italian Cousine'
   },
   {
-    name: 'Dominos',
+    name: 'Thyme Bistro',
     city: 'Weston',
-    category: 'Pizza, Pasta and Sandwiches'
+    category: 'Fine Dining & Cousine all the thyme'
   },
   {
     name: 'T&L Hotdogs',
