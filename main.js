@@ -221,7 +221,7 @@ function generate_homepage() {
       );
     document.write("<br /> Please choose the one you'd like to see a menu for");
     document.write("<br />");
-    document.write("<select id=\"WestonSelect\" size=\"7\"></select>");
+    document.write("<select id=\"WestonSelect\" size=\"7\" onchange=\"WestonSelectAlert();\"></select>");
     listallWestonrestaurants();
 
     document.write("<br /><br />");
@@ -231,43 +231,50 @@ function generate_homepage() {
     );
     document.write("<br /> Please choose the one you'd like to see a menu for");
     document.write("<br />");
-    document.write("<select id=\"JLSelect\" size=\"7\"></select>");
+    document.write("<select id=\"JLSelect\" size=\"5\" onchange=\"JLSelectAlert();\"></select>");
     listallJLrestaurants()
 
 // VARIABLE DECLARATIONS FOLLOW:
-var select = document.getElementById("JLSelect"); //Used by fillSelectElement()
+var select = document.getElementById("JLSelect"); //Used by fillSelectElement() 
 var select_option = document.createElement("option"); //Used by fillSelectElement()
-
-
 }
 
 generate_homepage();
 
 function listallWestonrestaurants() {
-
-  console.log('listallWestonRestaurants Triggered! You should have a nice selectable list');
-  
+  console.log('listallWestonRestaurants Triggered! You should have a nice selectable list!');
   for (const key of WestonEats) {
-  
-      let URL = key.name 
+        let URL = key.name 
       var select = document.getElementById("WestonSelect"); //Used by fillSelectElement()
   var select_option = document.createElement("option"); //Used by fillSelectElement()
       select_option.text = URL;
       select.add(select_option);
-
       };
   };
   
   function listallJLrestaurants() {
-    console.log('listallJLRestaurants Triggered! You should have a nice selectable list');
-  
+    console.log('listallJLRestaurants Triggered! You should have a nice selectable list!');
     for (const key of JaneLewEats) {
       let URL = key.name 
       var select = document.getElementById("JLSelect"); //Used by fillSelectElement()
   var select_option = document.createElement("option"); //Used by fillSelectElement()
       select_option.text = URL;
-      select.add(select_option);
-      
+      select.add(select_option); 
     }
-  
+  }
+
+  function WestonSelectAlert() {
+    var selectBox = document.getElementById("WestonSelect");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    alert(selectedValue);
+  }
+
+  function JLSelectAlert() {
+    var selectBox = document.getElementById("JLSelect");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    alert(selectedValue);
+  }
+
+  function MenuCreation() {
+    document.write()
   }
