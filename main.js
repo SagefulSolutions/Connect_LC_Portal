@@ -1,5 +1,8 @@
 //  FORMS THE DATABASE THAT STORES ALL INFO FOR THE APPLICATION TO FUNCTION. FROM RESTAURANTS DOWN TO THEIR MENUS AND PRICING.
 //  IT FEELS LIKE THIS SHOULD BE STORED ELSEWHERE, BUT I DON'T KNOW HOW TO DO THAT AND CALL IT INTO THIS FILE. SOMETHING TO LEARN LATER.
+
+cl = console.log
+
 const eats = [
     {
     name: 'Giovannis',
@@ -8,14 +11,14 @@ const eats = [
     menu: {
       early_mornin_fixins: 
         {
-            'Sharon Sunrise': {description: '', Price: 6.95},
-            'JR Jumbo': {description: '', Price: 8.95},
-            'Jackie Stack': {description: '', Price: 5.95},
-            'French Toast': {description: '', Price: 5.95},
-            'Harold Special': {description: '', Price: 2.95},
-            'Cheese Omelet': {description: '', Price: 3.95},
-            'Supreme Omelet': {description: '', Price: 7.95},
-            'Biscuit & Sausage Gravy': {description: '', Price: 2.95}
+            'Sharon Sunrise': {description: 'Sharon Sunrise', Price: 6.95},
+            'JR Jumbo': {description: 'JR Jumbo', Price: 8.95},
+            'Jackie Stack': {description: 'Jackie Stack', Price: 5.95},
+            'French Toast': {description: 'French Toast', Price: 5.95},
+            'Harold Special': {description: 'Harold Special', Price: 2.95},
+            'Cheese Omelet': {description: 'Cheese Omelet', Price: 3.95},
+            'Supreme Omelet': {description: 'Supreme Omelet', Price: 7.95},
+            'Biscuit & Sausage Gravy': {description: 'Biscuit & Sausage Gravy', Price: 2.95}
         },
       shared_plates:
         {
@@ -115,6 +118,7 @@ const eats = [
               //: {description: '', Price: 12.95}, (copypasta::)
     }
   },
+  
   {
     name: 'Ginos',
     category: 'Italian Cousine',
@@ -203,26 +207,32 @@ const eats = [
 const WestonEats = eats.filter((eats) => {
   return eats.city == 'Weston'
 })
+
 const JaneLewEats = eats.filter((eats) => {
   return eats.city == 'Jane Lew'
 })
+
 const JLEatsNames = JaneLewEats.map((eats) => {
   return eats.name
 })
+
 const WestonEatsNames = WestonEats.map((eats) => {
   return eats.name
 })
+
 const eats2 = eats.filter((eats) => {
   return eats
 })
+
 const keys = Object.values(JLEatsNames)
 
 const giovannismenu = Object.keys(giomenu)
+
 const gioearlyfixins = Object.values(giovannis)
 
 function printallrestaurants() {
     document.open();
-    console.log("clear should have happened");
+    cl("clear should have happened");
     for (const key of eats) {
       document.write("<br />")
       document.write(key.name)
@@ -264,7 +274,7 @@ var select_option = document.createElement("option");
 generate_homepage();
 
 function listallWestonrestaurants() {
-  console.log('listallWestonRestaurants Triggered! You should have a nice selectable list!');
+  cl('listallWestonRestaurants Triggered! You should have a nice selectable list!');
   for (const key of WestonEats) {
         let restName = key.name
       var select = document.getElementById("WestonSelect"); 
@@ -275,7 +285,7 @@ function listallWestonrestaurants() {
   };
   
   function listallJLrestaurants() {
-    console.log('listallJLRestaurants Triggered! You should have a nice selectable list!');
+    cl('listallJLRestaurants Triggered! You should have a nice selectable list!');
     for (const key of JaneLewEats) {
       let restName = key.name 
       var select = document.getElementById("JLSelect"); 
@@ -299,18 +309,20 @@ function listallWestonrestaurants() {
 
 
   test = giovannis.menu.early_mornin_fixins
+  
   function MenuCreation() {
-    console.log('MenuCreation Triggered!'); 
-    for (const key of JaneLewEats) {
-      let URL = key.name 
-      var select = document.getElementById("JLMenuSelect"); 
-  var select_option = document.createElement("option"); 
-      select_option.text = URL;
-      select.add(select_option); 
-   
+    cl('MenuCreation Triggered!'); 
+    for (let prop in giovannismenu) {
+      cl(prop)      
+    }
+   cl('MenuCreation() Ended!')
   }
-}
 
-document.write(giovannismenu)
+//document.write(giovannismenu)
 
 MenuCreation();
+
+
+
+cl(giomenu);
+cl(eats);
