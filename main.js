@@ -82,9 +82,7 @@ let giomenu = [
 {name: '18 oz Center Cut NY Strip', description: '18 oz center cut NY strip and two sides', Price: 19.95},
 {name: '8 oz Atlantic Salmon', description: 'Atlantic salmon cajun dry rub or sesame ginger glaze and two sides', Price: 18.95},
 ]
-
-/* sammiches:
-  {
+  sammiches = [
 {name: 'Giovanni Special', description: '', Price: 12.95},
 {name: 'Grilled Chicken', description: '', Price: 12.95},
 {name: 'Fried Fish', description: '', Price: 12.95},
@@ -97,9 +95,9 @@ let giomenu = [
 {name: 'Hot Roast Beef & Country Fried Steak', description: '', Price: 12.95},
 {name: 'Hot Dog', description: '', Price: 2.25},
 {name: 'Slaw Dog', description: '', Price: 2.95},
-  },
-pizza_and_calzones:
-  {
+];
+
+pizza_and_calzones = [
 {name: '5 Toppings Full Zone', description: '', Price: 10.95},
 {name: '1 Topping Full Zone', description: '', Price: 7.95},
 {name: '5 Toppings Half Zone', description: '', Price: 7.95},
@@ -112,7 +110,6 @@ pizza_and_calzones:
 {name: '1 Topping 4-slice Half Pizza', description: '', Price: 5.95},
 {name: '5 Toppings Cauliflower GF/Low Carb', description: '', Price: 13.95},
 {name: '1 Topping Cauliflower GF/Low Carb', description: '', Price: 9.95}
-  }  */
 ];
 
 const eats = [
