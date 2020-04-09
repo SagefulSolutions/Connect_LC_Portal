@@ -186,10 +186,10 @@ const eats = [
 // FROM const eats above ^^^
     let giovannis = eats[0]
     let ginos = eats[1]
-    let dominos = eats[2]
+    let thymebistro = eats[2]
     let tlhotdogs = eats[3]
     let flyingdogs = eats[4]
-    let patron = eats[5]
+    let donpatron = eats[5]
     let hickoryhouse = eats[6]
     let mainstcafe = eats[7]
     let robinsnest = eats[8]
