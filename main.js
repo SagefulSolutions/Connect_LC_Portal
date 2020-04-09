@@ -66,8 +66,7 @@ let giomenu = [
     {name: 'Shaved Ribeye', description: 'tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', Price: 9.95}
 ],
 
-  dinn_dinn = [
-  
+  dinn_dinn = [  
     {name: 'Spaghetti, side salad & garlic toast', description: 'Spaghetti with a side salad & garlic toast and two sides.', Price: 10.95},
     {name: 'Country Fried Steak', description: 'Country fried steak and two sides', Price: 12.95},
     {name: 'Hamburger Steak', description: 'Hamburger steak smothered with grilled onions, mushrooms and brown gravy and two sides', Price:  12.95},
@@ -76,12 +75,12 @@ let giomenu = [
     {name: 'Chicken Tenders', description: 'Chicken Tenders and two sides', Price: 12.95},
 ],
 
-  farm_and_sea = [
-  
+  farm_and_sea = [  
 {name: '12 oz Center Cut Ribeye', description: '12 oz center cut ribeye and two sides', Price: 22.95},
 {name: '18 oz Center Cut NY Strip', description: '18 oz center cut NY strip and two sides', Price: 19.95},
-{name: '8 oz Atlantic Salmon', description: 'Atlantic salmon cajun dry rub or sesame ginger glaze and two sides', Price: 18.95},
-]
+{name: '8 oz Atlantic Salmon', description: 'Atlantic salmon cajun dry rub or sesame ginger glaze and two sides', Price: 18.95}
+],
+  
   sammiches = [
 {name: 'Giovanni Special', description: '', Price: 12.95},
 {name: 'Grilled Chicken', description: '', Price: 12.95},
@@ -95,9 +94,9 @@ let giomenu = [
 {name: 'Hot Roast Beef & Country Fried Steak', description: '', Price: 12.95},
 {name: 'Hot Dog', description: '', Price: 2.25},
 {name: 'Slaw Dog', description: '', Price: 2.95},
-];
+],
 
-pizza_and_calzones = [
+  pizza_and_calzones = [
 {name: '5 Toppings Full Zone', description: '', Price: 10.95},
 {name: '1 Topping Full Zone', description: '', Price: 7.95},
 {name: '5 Toppings Half Zone', description: '', Price: 7.95},
@@ -110,6 +109,7 @@ pizza_and_calzones = [
 {name: '1 Topping 4-slice Half Pizza', description: '', Price: 5.95},
 {name: '5 Toppings Cauliflower GF/Low Carb', description: '', Price: 13.95},
 {name: '1 Topping Cauliflower GF/Low Carb', description: '', Price: 9.95}
+]
 ];
 
 const eats = [
