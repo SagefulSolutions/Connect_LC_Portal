@@ -283,6 +283,8 @@ function WestonSelectMenu() {
    var selectBox = document.getElementById("WestonSelect");
    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
    alert(selectedValue);
+   selectedValueURLified = selectedValue.replace(/['&"]+/g, '')
+   cl(selectedValueURLified,'_self');
 }
 
 function JLSelectMenu() {
