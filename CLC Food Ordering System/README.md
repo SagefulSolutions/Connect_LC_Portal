@@ -1,2 +1,3 @@
-# Connect_LC_Portal
-ConnectLC Portal
+# ConnectLC Food Ordering System
+
+Readme placeholder.
