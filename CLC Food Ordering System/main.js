@@ -284,7 +284,7 @@ function WestonSelectMenu() {
    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
    alert(selectedValue);
    selectedValueURLified = selectedValue.replace(/['&"]+/g, '')
-   cl(selectedValueURLified,'_self');
+   console.log(selectedValueURLified,'_self');
 }
 
 function JLSelectMenu() {
