@@ -1,2 +1,2 @@
-# Connect_LC_Portal
-ConnectLC Portal
+# Connect_LC_Food_Ordering_System
+ConnectLC Food Ordering System
