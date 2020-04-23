@@ -2,7 +2,8 @@
 
 ## ConnectLC Portal should enable the people of Lewis County, West Virginia to interact with other citizens, businesses and government agencies.
 
-### Food ordering is first on the agenda.
-### Bill Payment via website
+### Online ordering is first on the agenda.
 ### Directory of businesses in the area
-### Taxes / Public Record management
+### Pay Municipal Taxes
+### Public Record management
+### Bill Payment via website
