@@ -216,8 +216,23 @@ const eats2 = eats.filter((eats) => {
 })
 const keys = Object.values(JLEatsNames)
 
+//THIS FUNCTION CREATES THE HEADER "CONNECT LC ONLINE ORDERING SYSTEM COPYRIGHT APRIL 2020 JUSTIN WAUGH"
+function gen_HomeHeader() {
+  document.write("<div id=\"HOMEheader\">")
+  document.write("<center><h1>ConnectLC </h1>");
+  document.write("<h2>ONLINE ORDERING SYSTEM</h2>");
+  document.write("<h6>&copy;April 2020 Justin Waugh</h6></center>");
+  document.write("</div>");
+}
+
 // THIS FUNCTION WILL CHOOSE ONLY WESTON RESTAURANTS FROM THE CONSTANT 'eats' ON LINE #115
 function listallWestonrestaurants() {
+  document.write("<strong>Weston has the following restaurant options.</strong>");
+  document.write("<br /> Please choose the one you'd like to see a menu for");
+  document.write("<br />");
+  document.write("<select id=\"WestonSelect\" size=\"8\" onchange=\"WestonSelectMenu();\"></select>");
+  document.write("==>")
+  document.write("<select id=\"WestonMenuSelect\" size=\"8\" onchange=\"CALL_A_FUNCTION_HERE();\"></select>");
   cl('listallWestonRestaurants Triggered! You should have a nice selectable list!');
   for (key of WestonEats) {
     let restName = key.name
@@ -231,51 +246,47 @@ function listallWestonrestaurants() {
 // THIS FUNCTION WILL CHOOSE ONLY JANE LEW RESTAURANTS FROM THE CONSTANT 'eats' ON LINE #115
 function listallJLrestaurants() {
   cl('listallJLRestaurants Triggered! You should have a nice selectable list!');
+  document.write("<br /><br />");
+  document.write("<strong>Jane Lew has the following restaurant options.</strong>");
+  document.write("<br /> Please choose the one you'd like to see a menu for");
+  document.write("<br />");
+  document.write("<select id=\"JLSelect\" size=\"5\" onchange=\"JLSelectMenu();\"></select>");
+  document.write("==>");
+  document.write("<select id=\"JLMenuSelect\" size=\"5\"></select>");
     for (const key of JaneLewEats) {
       let restName = key.name 
       var select = document.getElementById("JLSelect"); 
       var select_option = document.createElement("option"); 
       select_option.text = restName;
-      select.add(select_option); 
+      select.add(select_option);
+   
     }
 }
 
-// THIS FUNCTION CREATES THE HTML FOR THE HOMEPAGE LAYOUT!!!
-function generate_homepage() {
-    document.open();
-    document.write("<center><h1>ConnectLC </h1>");
-    document.write("<h2>FOOD ORDERING SYSTEM</h2>");
-    document.write("<h6>&copy; Copyright 2020 Justin Waugh</h6>")
-    document.write(
-        "<strong>Weston has the following restaurant options.</strong>"
-      );
-    document.write("<br /> Please choose the one you'd like to see a menu for");
-    document.write("<br />");
-    document.write("<select id=\"WestonSelect\" size=\"8\" onchange=\"WestonSelectMenu();\"></select>");
-    listallWestonrestaurants();
-    document.write("==>")
-    document.write("<select id=\"WestonMenuSelect\" size=\"8\" onchange=\"CALL_A_FUNCTION_HERE();\"></select>");
-    document.write("<br /><br />");
-    document.write(
-    "<strong>Jane Lew has the following restaurant options.</strong>"
-    );
-    document.write("<br /> Please choose the one you'd like to see a menu for");
-    document.write("<br />");
-    document.write("<select id=\"JLSelect\" size=\"5\" onchange=\"JLSelectMenu();\"></select>");
-    document.write("==>");
-    document.write("<select id=\"JLMenuSelect\" size=\"5\"></select>");
-    document.write("</center>")    
-    listallJLrestaurants();
+                                /////   //////////////////////////////////////////////////////////  /////
+                                /////   THIS FUNCTION CREATES THE HTML FOR THE HOMEPAGE LAYOUT!!!   /////
+                                /////   //////////////////////////////////////////////////////////  /////
 
-// VARIABLE DECLARATIONS FOLLOW:
-var select = document.getElementById("JLSelect");  
-var select_option = document.createElement("option"); 
+function generate_homepage() {
+
+    document.open();
+    gen_HomeHeader();
+    document.write("<div id=\"HOMEeats\"><center>");
+    document.write("<HR>");
+    document.write("<h2>Eats</h2>");
+    listallWestonrestaurants();
+    listallJLrestaurants();
+    document.write("</center>")    
+    document.write("</center></div>")
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////      ANYTHING HAPPENING BELOW HERE IS AFTER THE HOMEPAGE HAS BEEN GENERATED ABOVE    ////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+function gen_GioPage() {
+  document.getElementById("HOMEeats").style.display="none";  //hides everything from the heading EATS
+  document.write("<div id=\"DIVGiovannis\">")
+  document.getElementById("DIVGiovannis").style.display="none"
+}
 
 generate_homepage();
 
@@ -285,6 +296,8 @@ function WestonSelectMenu() {
    alert(selectedValue);
    selectedValueURLified = selectedValue.replace(/['&"]+/g, '')
    cl(selectedValueURLified,'_self');
+   var Weston2 = document.getElementById("WestonMenuSelect")
+   Weston2.style.display = "none";   
 }
 
 function JLSelectMenu() {
@@ -295,13 +308,13 @@ function JLSelectMenu() {
 
 function JLMenuCreation() {
   cl('MenuCreation Triggered!'); 
-  //cl('')
-  //cl('------------------------------------------------------') 
+  cl('')
+  cl('------------------------------------------------------') 
   const EarlyMorninFixins = giomenu_early_mornin_fixins.map((giomenu_early_mornin_fixins) => {
     return giomenu_early_mornin_fixins.name })
     document.write()
   
-    //cl(giomenu_early_mornin_fixins[0].title)
+    cl(giomenu_early_mornin_fixins[0].title)
   
     for (let prop in giomenu_early_mornin_fixins) {
     //cl(EarlyMorninFixins[prop])
@@ -318,12 +331,13 @@ function MenuCreation() {
   //cl('')
   //cl('------------------------------------------------------') 
   const EarlyMorninFixins = giomenu_early_mornin_fixins.map((giomenu_early_mornin_fixins) => {
-    return giomenu_early_mornin_fixins.name })
-    document.write()
-    //cl(giomenu_early_mornin_fixins[0].title)
+    return giomenu_early_mornin_fixins.name
+  })
+    
+    cl(giomenu_early_mornin_fixins[0].title)
   
-    for (let prop in giomenu_early_mornin_fixins) {
-    //cl(EarlyMorninFixins[prop])
+  for (let prop in giomenu_early_mornin_fixins) {
+    cl(EarlyMorninFixins[prop])
     //cl('---------------------------------------------------------------------------------')
     //cl(giomenu_early_mornin_fixins[prop])      
   }
