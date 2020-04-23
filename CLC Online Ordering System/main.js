@@ -180,25 +180,23 @@ const eats = [
     category: '',
   },
 ]
-// SET UP VARIABLES TO RECOGNIZE 
-// RESTAURANTS AS THEIR NAMES
-// FROM const eats above ^^^
-    let giovannis = eats[0]
-    let ginos = eats[1]
-    let thymebistro = eats[2]
-    let westforkeatery = eats[3]
-    let tlhotdogs = eats[4]
-    let flyingdogs = eats[5]
-    let donpatron = eats[6]
-    let icecreambarn = eats[7]
-    let mainstcafe = eats[8]
-    let robinsnest = eats[9]
-    let servicestation = eats[10]
-    let lightburns = eats[11]
-    let flyingdogsjl = eats[12]
 
-// SETTING UP CONSTANTS TO BE USED IN APPLICATION
-// BELOW    
+// SETTING UP VARIABLES TO RECOGNIZE RESTAURANTS AS THEIR NAMES FROM THE CONSTANT "eats" above ^^^
+let giovannis = eats[0]
+let ginos = eats[1]
+let thymebistro = eats[2]
+let westforkeatery = eats[3]
+let tlhotdogs = eats[4]
+let flyingdogs = eats[5]
+let donpatron = eats[6]
+let icecreambarn = eats[7]
+let mainstcafe = eats[8]
+let robinsnest = eats[9]
+let servicestation = eats[10]
+let lightburns = eats[11]
+let flyingdogsjl = eats[12]
+
+// SETTING UP CONSTANTS TO BE USED IN APPLICATION BELOW    
 const WestonEats = eats.filter((eats) => {
   return eats.city == 'Weston'
 })
