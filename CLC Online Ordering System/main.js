@@ -45,6 +45,7 @@ let giomenu = [
 ],
 
   giomenu_sides = [
+    {title: 'Sides'},
     {name: 'French Fries', description: '', price: 2.95},
     {name: 'Cottage Cheese', description: '', price: 2.95},
     {name: 'Slaw', description: '', price: 2.95},
@@ -59,6 +60,7 @@ let giomenu = [
   ],
 
   giomenu_salads = [
+    {title: 'Salads'},
     {name: 'Antipasta', description: 'olives, banana peppers, American & mozzarella cheese, tomatoes, green peppers, onions, ham, pepperoni, egg & topped with homemade croutons', price: 9.95},
     {name: 'Salmon', description: '8oz atlantic salmon, tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', price: 16.95},
     {name: 'Grilled Chicken', description: 'tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', price: 9.95},
@@ -66,7 +68,8 @@ let giomenu = [
     {name: 'Shaved Ribeye', description: 'tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', price: 9.95}
 ],
 
-  giomenu_dinn_dinn = [  
+  giomenu_dinn_dinn = [
+    {title: 'Dinn Dinn'},  
     {name: 'Spaghetti, side salad & garlic toast', description: 'Spaghetti with a side salad & garlic toast and two sides.', price: 10.95},
     {name: 'Country Fried Steak', description: 'Country fried steak and two sides', price: 12.95},
     {name: 'Hamburger Steak', description: 'Hamburger steak smothered with grilled onions, mushrooms and brown gravy and two sides', price:  12.95},
@@ -75,28 +78,31 @@ let giomenu = [
     {name: 'Chicken Tenders', description: 'Chicken Tenders and two sides', price: 12.95},
 ],
 
-  giomenu_farm_and_sea = [  
-{name: '12 oz Center Cut Ribeye', description: '12 oz center cut ribeye and two sides', price: 22.95},
-{name: '18 oz Center Cut NY Strip', description: '18 oz center cut NY strip and two sides', price: 19.95},
-{name: '8 oz Atlantic Salmon', description: 'Atlantic salmon cajun dry rub or sesame ginger glaze and two sides', price: 18.95}
-],
+  giomenu_farm_and_sea = [
+    {title: 'Farm and Sea'},  
+    {name: '12 oz Center Cut Ribeye', description: '12 oz center cut ribeye and two sides', price: 22.95},
+    {name: '18 oz Center Cut NY Strip', description: '18 oz center cut NY strip and two sides', price: 19.95},
+    {name: '8 oz Atlantic Salmon', description: 'Atlantic salmon cajun dry rub or sesame ginger glaze and two sides', price: 18.95}
+  ],
   
   giomenu_sammiches = [
-{name: 'Giovanni Special', description: '', price: 12.95},
-{name: 'Grilled Chicken', description: '', price: 12.95},
-{name: 'Fried Fish', description: '', price: 12.95},
-{name: 'Chicken Salad', description: '', price: 12.95},
-{name: 'BLT', description: '', price: 12.95},
-{name: 'Ham & Cheese', description: '', price: 12.95},
-{name: 'Ribeye Steak', description: '', price: 12.95},
-{name: 'Grilled Cheese', description: '', price: 12.95},
-{name: 'Club', description: '', price: 12.95},
-{name: 'Hot Roast Beef & Country Fried Steak', description: '', price: 12.95},
-{name: 'Hot Dog', description: '', price: 2.25},
-{name: 'Slaw Dog', description: '', price: 2.95},
+    {title: 'Sammiches'},
+    {name: 'Giovanni Special', description: '', price: 12.95},
+    {name: 'Grilled Chicken', description: '', price: 12.95},
+    {name: 'Fried Fish', description: '', price: 12.95},
+    {name: 'Chicken Salad', description: '', price: 12.95},
+    {name: 'BLT', description: '', price: 12.95},
+    {name: 'Ham & Cheese', description: '', price: 12.95},
+    {name: 'Ribeye Steak', description: '', price: 12.95},
+    {name: 'Grilled Cheese', description: '', price: 12.95},
+    {name: 'Club', description: '', price: 12.95},
+    {name: 'Hot Roast Beef & Country Fried Steak', description: '', price: 12.95},
+    {name: 'Hot Dog', description: '', price: 2.25},
+    {name: 'Slaw Dog', description: '', price: 2.95},
 ],
 
   giomenu_pizza_and_calzones = [
+    {title: 'Pizza and Calzones'},
 {name: '5 Toppings Full Zone', description: '', price: 10.95},
 {name: '1 Topping Full Zone', description: '', price: 7.95},
 {name: '5 Toppings Half Zone', description: '', price: 7.95},
@@ -353,6 +359,7 @@ function JLMenuCreation() {
 //gen_GioPage();
 
 function MenuCreation() {
+  
   const EarlyMorninFixins = giomenu_early_mornin_fixins.map((giomenu_early_mornin_fixins) => {
     return giomenu_early_mornin_fixins.name
   })   
@@ -377,17 +384,91 @@ function MenuCreation() {
     }
   }
 
-  const FarmToTableBurges = giomenu_farm_to_table_burgers.map((giomenu_farm_to_table_burgers) => {
+  const FarmToTableBurgers = giomenu_farm_to_table_burgers.map((giomenu_farm_to_table_burgers) => {
     return giomenu_farm_to_table_burgers.name
   })
   document.write("<u><h3>"+giomenu_farm_to_table_burgers[0].title+"</h3></u>")
   for (let item in giomenu_early_mornin_fixins) {
-    if (SharedPlates[item] != undefined) {
+    if (FarmToTableBurgers[item] != undefined) {
       prices = giomenu_farm_to_table_burgers[item].price
-      document.write(FarmToTableBurges[item]+" ... "+prices)
+      document.write(FarmToTableBurgers[item]+" ... "+prices)
       document.write("<br />")
     }
   }  
 
+  const Sides = giomenu_sides.map((giomenu_sides) => {
+    return giomenu_sides.name
+  })
+  document.write("<u><h3>"+giomenu_sides[0].title+"</h3></u>")
+  for (let item in giomenu_sides) {
+    if (SharedPlates[item] != undefined) {
+      prices = giomenu_sides[item].price
+      document.write(Sides[item]+" ... "+prices)
+      document.write("<br />")
+    }
+  }  
 
+  const Salads = giomenu_salads.map((giomenu_salads) => {
+    return giomenu_salads.name
+  })
+  document.write("<u><h3>"+giomenu_salads[0].title+"</h3></u>")
+  for (let item in giomenu_salads) {
+    if (Salads[item] != undefined) {
+      prices = giomenu_salads[item].price
+      document.write(Salads[item]+" ... "+prices)
+      document.write("<br />")
+    }
+  }  
+
+  const DinnDinn = giomenu_dinn_dinn.map((giomenu_dinn_dinn) => {
+    return giomenu_dinn_dinn.name
+  })
+  document.write("<u><h3>"+giomenu_dinn_dinn[0].title+"</h3></u>")
+  for (let item in giomenu_dinn_dinn) {
+    if (DinnDinn[item] != undefined) {
+      prices = giomenu_dinn_dinn[item].price
+      document.write(DinnDinn[item]+" ... "+prices)
+      document.write("<br />")
+    }
+  }
+
+  const FarmandSea = giomenu_farm_and_sea.map((giomenu_farm_and_sea) => {
+    return giomenu_farm_and_sea.name
+  })
+  document.write("<u><h3>"+giomenu_farm_and_sea[0].title+"</h3></u>")
+  for (let item in giomenu_farm_and_sea) {
+    if (FarmandSea[item] != undefined) {
+      prices = giomenu_farm_and_sea[item].price
+      document.write(FarmandSea[item]+" ... "+prices)
+      document.write("<br />")
+    }
+  }
+
+  const Sammiches = giomenu_sammiches.map((giomenu_sammiches) => {
+    return giomenu_sammiches.name
+  })
+  document.write("<u><h3>"+giomenu_sammiches[0].title+"</h3></u>")
+  for (let item in giomenu_sammiches) {
+    if (Sammiches[item] != undefined) {
+      prices = giomenu_sammiches[item].price
+      num = 0
+      document.write("<input type=\"checkbox\" id=\""+num+"\"></input>"+Sammiches[item]+" ... "+prices)
+      document.write("<br />")
+      num++
+    }
+  }
+ 
+  const PizzaCalzones = giomenu_pizza_and_calzones.map((giomenu_pizza_and_calzones) => {
+    return giomenu_pizza_and_calzones.name
+  })
+  document.write("<u><h3>"+giomenu_pizza_and_calzones[0].title+"</h3></u>")
+  for (let item in giomenu_pizza_and_calzones) {
+    if (PizzaCalzones[item] != undefined) {
+      prices = giomenu_pizza_and_calzones[item].price
+      document.write(PizzaCalzones[item]+" ... "+prices)
+      document.write("<br />")
+    }
+  }
 }
+
+
