@@ -449,13 +449,13 @@ function MenuCreation() {
   })
   document.write("<u><h3>"+giomenu_sammiches[0].title+"</h3></u>")
   for (let item in giomenu_sammiches) {
+    num = 0
     if (Sammiches[item] != undefined) {
       prices = giomenu_sammiches[item].price
-      num = 0
-      document.write("<input type=\"checkbox\" id=\""+num+"\"></input>"+Sammiches[item]+" ... "+prices)
-      document.write("<br />")
-      num++
+      document.write("<input type=\"checkbox\" id=\"sam_"+item+"\"></input>"+Sammiches[item]+" ... "+prices)
+      document.write("<br />")  
     }
+    num = num+1
   }
  
   const PizzaCalzones = giomenu_pizza_and_calzones.map((giomenu_pizza_and_calzones) => {
