@@ -32,7 +32,7 @@ let giomenu = [
       {name: 'Bacon OR Chili Cheese Fries (small)', description: '', price: 6.95},
       {name: 'Bacon OR Chili Cheese Fries (large)', description: '', price: 8.95}
   ],
-  farm_to_table_burgers = [
+  giomenu_farm_to_table_burgers = [
       {title: 'Farm to Table Burgers'},
       {name: 'Hamburger', description: 'Fresh angus beef, topped with ketchup, mustard, onion, pickle, lettuce, tomato & mayo', price: 4.50},
       {name: 'Double Hamburger', description: 'Fresh angus beef, topped with ketchup, mustard, onion, pickle, lettuce, tomato & mayo', price: 7.50},
@@ -44,7 +44,7 @@ let giomenu = [
       {name: 'Wimpy', description: 'Cheddar jack cheese, bacon, grilled onions, mushrooms & garlic aioli', price: 6.95}
 ],
 
-  sides = [
+  giomenu_sides = [
     {name: 'French Fries', description: '', price: 2.95},
     {name: 'Cottage Cheese', description: '', price: 2.95},
     {name: 'Slaw', description: '', price: 2.95},
@@ -58,7 +58,7 @@ let giomenu = [
     {name: 'Mac n Cheese', description: '', price: 4.95},
   ],
 
-  salads = [
+  giomenu_salads = [
     {name: 'Antipasta', description: 'olives, banana peppers, American & mozzarella cheese, tomatoes, green peppers, onions, ham, pepperoni, egg & topped with homemade croutons', price: 9.95},
     {name: 'Salmon', description: '8oz atlantic salmon, tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', price: 16.95},
     {name: 'Grilled Chicken', description: 'tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', price: 9.95},
@@ -66,7 +66,7 @@ let giomenu = [
     {name: 'Shaved Ribeye', description: 'tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', price: 9.95}
 ],
 
-  dinn_dinn = [  
+  giomenu_dinn_dinn = [  
     {name: 'Spaghetti, side salad & garlic toast', description: 'Spaghetti with a side salad & garlic toast and two sides.', price: 10.95},
     {name: 'Country Fried Steak', description: 'Country fried steak and two sides', price: 12.95},
     {name: 'Hamburger Steak', description: 'Hamburger steak smothered with grilled onions, mushrooms and brown gravy and two sides', price:  12.95},
@@ -75,13 +75,13 @@ let giomenu = [
     {name: 'Chicken Tenders', description: 'Chicken Tenders and two sides', price: 12.95},
 ],
 
-  farm_and_sea = [  
+  giomenu_farm_and_sea = [  
 {name: '12 oz Center Cut Ribeye', description: '12 oz center cut ribeye and two sides', price: 22.95},
 {name: '18 oz Center Cut NY Strip', description: '18 oz center cut NY strip and two sides', price: 19.95},
 {name: '8 oz Atlantic Salmon', description: 'Atlantic salmon cajun dry rub or sesame ginger glaze and two sides', price: 18.95}
 ],
   
-  sammiches = [
+  giomenu_sammiches = [
 {name: 'Giovanni Special', description: '', price: 12.95},
 {name: 'Grilled Chicken', description: '', price: 12.95},
 {name: 'Fried Fish', description: '', price: 12.95},
@@ -96,7 +96,7 @@ let giomenu = [
 {name: 'Slaw Dog', description: '', price: 2.95},
 ],
 
-  pizza_and_calzones = [
+  giomenu_pizza_and_calzones = [
 {name: '5 Toppings Full Zone', description: '', price: 10.95},
 {name: '1 Topping Full Zone', description: '', price: 7.95},
 {name: '5 Toppings Half Zone', description: '', price: 7.95},
@@ -293,15 +293,19 @@ function gen_GioPage() {
  
   function giohead() {
     document.write("<div id=\"DIVGiovannis\">")
-    document.write("<center><h1>Welcome to Giovannis Online!</center>");
-    document.write("</div>")
+    document.write("<center><h2>Welcome to Giovannis Online!</h2></center>");
+    
 
 
   }
   gen_HomeHeader();
   giohead();
+  document.write("</div>")
+  document.write("<h3><center><strong>DELIVERY / TAKEOUT MENU</strong></center></h3>")
+  document.write("<hr>")
   MenuCreation();
   gen_Footer();
+  
 }
 
 
@@ -349,25 +353,41 @@ function JLMenuCreation() {
 //gen_GioPage();
 
 function MenuCreation() {
-  cl('MenuCreation Triggered!'); 
-  //cl('')
-  //cl('------------------------------------------------------') 
   const EarlyMorninFixins = giomenu_early_mornin_fixins.map((giomenu_early_mornin_fixins) => {
     return giomenu_early_mornin_fixins.name
-  })
-    
-    document.write("<u><h3>"+giomenu_early_mornin_fixins[0].title+"</h3></u>")
-  
+  })   
+    document.write("<u><h3>"+giomenu_early_mornin_fixins[0].title+"</h3></u>")  
   for (let item in giomenu_early_mornin_fixins) {
     if (EarlyMorninFixins[item] != undefined) {
       prices = giomenu_early_mornin_fixins[item].price
       document.write(EarlyMorninFixins[item]+" ... "+prices)
       document.write("<br />")
     }
-    else {
-      //document.write("WTF")
-    }  
   }
- //cl('------------------------------------------------------')
- cl('MenuCreation() Ended!')
+  
+  const SharedPlates = giomenu_shared_plates.map((giomenu_shared_plates) => {
+    return giomenu_shared_plates.name
+  })
+  document.write("<u><h3>"+giomenu_shared_plates[0].title+"</h3></u>")
+  for (let item in giomenu_early_mornin_fixins) {
+    if (SharedPlates[item] != undefined) {
+      prices = giomenu_shared_plates[item].price
+      document.write(SharedPlates[item]+" ... "+prices)
+      document.write("<br />")
+    }
+  }
+
+  const FarmToTableBurges = giomenu_farm_to_table_burgers.map((giomenu_farm_to_table_burgers) => {
+    return giomenu_farm_to_table_burgers.name
+  })
+  document.write("<u><h3>"+giomenu_farm_to_table_burgers[0].title+"</h3></u>")
+  for (let item in giomenu_early_mornin_fixins) {
+    if (SharedPlates[item] != undefined) {
+      prices = giomenu_farm_to_table_burgers[item].price
+      document.write(FarmToTableBurges[item]+" ... "+prices)
+      document.write("<br />")
+    }
+  }  
+
+
 }
