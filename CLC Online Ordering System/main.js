@@ -45,70 +45,70 @@ let giomenu = [
 ],
 
   sides = [
-    {name: 'French Fries', description: '', Price: 2.95},
-    {name: 'Cottage Cheese', description: '', Price: 2.95},
-    {name: 'Slaw', description: '', Price: 2.95},
-    {name: 'Peaches', description: '', Price: 2.95},
-    {name: 'Pineapple', description: '', Price: 2.95},
-    {name: 'Veggies', description: '', Price: 2.95},
-    {name: 'Onion Rings', description: '', Price: 3.95},
-    {name: 'Sweet Potato Fries', description: '', Price: 3.95},
-    {name: 'Sidewinder Fries', description: '', Price: 3.95},
-    {name: 'Tossed Salad', description: '', Price: 3.95},
-    {name: 'Mac n Cheese', description: '', Price: 4.95},
+    {name: 'French Fries', description: '', price: 2.95},
+    {name: 'Cottage Cheese', description: '', price: 2.95},
+    {name: 'Slaw', description: '', price: 2.95},
+    {name: 'Peaches', description: '', price: 2.95},
+    {name: 'Pineapple', description: '', price: 2.95},
+    {name: 'Veggies', description: '', price: 2.95},
+    {name: 'Onion Rings', description: '', price: 3.95},
+    {name: 'Sweet Potato Fries', description: '', price: 3.95},
+    {name: 'Sidewinder Fries', description: '', price: 3.95},
+    {name: 'Tossed Salad', description: '', price: 3.95},
+    {name: 'Mac n Cheese', description: '', price: 4.95},
   ],
 
   salads = [
-    {name: 'Antipasta', description: 'olives, banana peppers, American & mozzarella cheese, tomatoes, green peppers, onions, ham, pepperoni, egg & topped with homemade croutons', Price: 9.95},
-    {name: 'Salmon', description: '8oz atlantic salmon, tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', Price: 16.95},
-    {name: 'Grilled Chicken', description: 'tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', Price: 9.95},
-    {name: 'Crispy Chicken', description: 'tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', Price: 9.95},
-    {name: 'Shaved Ribeye', description: 'tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', Price: 9.95}
+    {name: 'Antipasta', description: 'olives, banana peppers, American & mozzarella cheese, tomatoes, green peppers, onions, ham, pepperoni, egg & topped with homemade croutons', price: 9.95},
+    {name: 'Salmon', description: '8oz atlantic salmon, tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', price: 16.95},
+    {name: 'Grilled Chicken', description: 'tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', price: 9.95},
+    {name: 'Crispy Chicken', description: 'tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', price: 9.95},
+    {name: 'Shaved Ribeye', description: 'tomatoes, onions, green peppers & topped with homemade croutons, mozzarella cheese & french fries', price: 9.95}
 ],
 
   dinn_dinn = [  
-    {name: 'Spaghetti, side salad & garlic toast', description: 'Spaghetti with a side salad & garlic toast and two sides.', Price: 10.95},
-    {name: 'Country Fried Steak', description: 'Country fried steak and two sides', Price: 12.95},
-    {name: 'Hamburger Steak', description: 'Hamburger steak smothered with grilled onions, mushrooms and brown gravy and two sides', Price:  12.95},
-    {name: 'Liver and Onions', description: 'Liver and onions and two sides', Price: 12.95},
-    {name: 'Shrimp', description: 'Shrimp - breaded or grilled w/fries & slaw and two sides', Price: 12.95},
-    {name: 'Chicken Tenders', description: 'Chicken Tenders and two sides', Price: 12.95},
+    {name: 'Spaghetti, side salad & garlic toast', description: 'Spaghetti with a side salad & garlic toast and two sides.', price: 10.95},
+    {name: 'Country Fried Steak', description: 'Country fried steak and two sides', price: 12.95},
+    {name: 'Hamburger Steak', description: 'Hamburger steak smothered with grilled onions, mushrooms and brown gravy and two sides', price:  12.95},
+    {name: 'Liver and Onions', description: 'Liver and onions and two sides', price: 12.95},
+    {name: 'Shrimp', description: 'Shrimp - breaded or grilled w/fries & slaw and two sides', price: 12.95},
+    {name: 'Chicken Tenders', description: 'Chicken Tenders and two sides', price: 12.95},
 ],
 
   farm_and_sea = [  
-{name: '12 oz Center Cut Ribeye', description: '12 oz center cut ribeye and two sides', Price: 22.95},
-{name: '18 oz Center Cut NY Strip', description: '18 oz center cut NY strip and two sides', Price: 19.95},
-{name: '8 oz Atlantic Salmon', description: 'Atlantic salmon cajun dry rub or sesame ginger glaze and two sides', Price: 18.95}
+{name: '12 oz Center Cut Ribeye', description: '12 oz center cut ribeye and two sides', price: 22.95},
+{name: '18 oz Center Cut NY Strip', description: '18 oz center cut NY strip and two sides', price: 19.95},
+{name: '8 oz Atlantic Salmon', description: 'Atlantic salmon cajun dry rub or sesame ginger glaze and two sides', price: 18.95}
 ],
   
   sammiches = [
-{name: 'Giovanni Special', description: '', Price: 12.95},
-{name: 'Grilled Chicken', description: '', Price: 12.95},
-{name: 'Fried Fish', description: '', Price: 12.95},
-{name: 'Chicken Salad', description: '', Price: 12.95},
-{name: 'BLT', description: '', Price: 12.95},
-{name: 'Ham & Cheese', description: '', Price: 12.95},
-{name: 'Ribeye Steak', description: '', Price: 12.95},
-{name: 'Grilled Cheese', description: '', Price: 12.95},
-{name: 'Club', description: '', Price: 12.95},
-{name: 'Hot Roast Beef & Country Fried Steak', description: '', Price: 12.95},
-{name: 'Hot Dog', description: '', Price: 2.25},
-{name: 'Slaw Dog', description: '', Price: 2.95},
+{name: 'Giovanni Special', description: '', price: 12.95},
+{name: 'Grilled Chicken', description: '', price: 12.95},
+{name: 'Fried Fish', description: '', price: 12.95},
+{name: 'Chicken Salad', description: '', price: 12.95},
+{name: 'BLT', description: '', price: 12.95},
+{name: 'Ham & Cheese', description: '', price: 12.95},
+{name: 'Ribeye Steak', description: '', price: 12.95},
+{name: 'Grilled Cheese', description: '', price: 12.95},
+{name: 'Club', description: '', price: 12.95},
+{name: 'Hot Roast Beef & Country Fried Steak', description: '', price: 12.95},
+{name: 'Hot Dog', description: '', price: 2.25},
+{name: 'Slaw Dog', description: '', price: 2.95},
 ],
 
   pizza_and_calzones = [
-{name: '5 Toppings Full Zone', description: '', Price: 10.95},
-{name: '1 Topping Full Zone', description: '', Price: 7.95},
-{name: '5 Toppings Half Zone', description: '', Price: 7.95},
-{name: '1 Topping Half Zone', description: '', Price: 5.95},
-{name: '5 Toppings 12x16in Rectangle Pizza', description: '', Price: 19.95},
-{name: '1 Topping 12x16in Rectangle Pizza', description: '', Price: 13.95},
-{name: '5 Toppings 12in Round Pizza', description: '', Price: 13.95},
-{name: '1 Topping 12in Round Pizza', description: '', Price: 9.95},
-{name: '5 Toppings 4-slice Half Pizza', description: '', Price: 7.95},
-{name: '1 Topping 4-slice Half Pizza', description: '', Price: 5.95},
-{name: '5 Toppings Cauliflower GF/Low Carb', description: '', Price: 13.95},
-{name: '1 Topping Cauliflower GF/Low Carb', description: '', Price: 9.95}
+{name: '5 Toppings Full Zone', description: '', price: 10.95},
+{name: '1 Topping Full Zone', description: '', price: 7.95},
+{name: '5 Toppings Half Zone', description: '', price: 7.95},
+{name: '1 Topping Half Zone', description: '', price: 5.95},
+{name: '5 Toppings 12x16in Rectangle Pizza', description: '', price: 19.95},
+{name: '1 Topping 12x16in Rectangle Pizza', description: '', price: 13.95},
+{name: '5 Toppings 12in Round Pizza', description: '', price: 13.95},
+{name: '1 Topping 12in Round Pizza', description: '', price: 9.95},
+{name: '5 Toppings 4-slice Half Pizza', description: '', price: 7.95},
+{name: '1 Topping 4-slice Half Pizza', description: '', price: 5.95},
+{name: '5 Toppings Cauliflower GF/Low Carb', description: '', price: 13.95},
+{name: '1 Topping Cauliflower GF/Low Carb', description: '', price: 9.95}
 ]
 ];
 
@@ -290,15 +290,18 @@ function generate_homepage() {
 
 //  THIS FUNCTION WILL CREATE A PAGE THAT SHOWS A GIOVANNIS MENU AND CONTACT INFORMATION
 function gen_GioPage() {
+ 
   function giohead() {
     document.write("<div id=\"DIVGiovannis\">")
     document.write("<center><h1>Welcome to Giovannis Online!</center>");
     document.write("</div>")
-    
+
 
   }
   gen_HomeHeader();
   giohead();
+  MenuCreation();
+  gen_Footer();
 }
 
 
@@ -343,6 +346,7 @@ function JLMenuCreation() {
  cl('MenuCreation() Ended!')
 }
 
+//gen_GioPage();
 
 function MenuCreation() {
   cl('MenuCreation Triggered!'); 
@@ -352,12 +356,17 @@ function MenuCreation() {
     return giomenu_early_mornin_fixins.name
   })
     
-    cl(giomenu_early_mornin_fixins[0].title)
+    document.write("<u><h3>"+giomenu_early_mornin_fixins[0].title+"</h3></u>")
   
-  for (let prop in giomenu_early_mornin_fixins) {
-    cl(EarlyMorninFixins[prop])
-    //cl('---------------------------------------------------------------------------------')
-    //cl(giomenu_early_mornin_fixins[prop])      
+  for (let item in giomenu_early_mornin_fixins) {
+    if (EarlyMorninFixins[item] != undefined) {
+      prices = giomenu_early_mornin_fixins[item].price
+      document.write(EarlyMorninFixins[item]+" ... "+prices)
+      document.write("<br />")
+    }
+    else {
+      //document.write("WTF")
+    }  
   }
  //cl('------------------------------------------------------')
  cl('MenuCreation() Ended!')
