@@ -112,7 +112,7 @@ let giomenu = [
 ]
 ];
 
-const eats = [
+let eats = [
     {
     name: 'Giovannis',
     city: 'Weston',
@@ -181,47 +181,57 @@ const eats = [
   },
 ]
 
-// SETTING UP VARIABLES TO RECOGNIZE RESTAURANTS AS THEIR NAMES FROM THE CONSTANT "eats" above ^^^
-let giovannis = eats[0]
-let ginos = eats[1]
-let thymebistro = eats[2]
-let westforkeatery = eats[3]
-let tlhotdogs = eats[4]
-let flyingdogs = eats[5]
-let donpatron = eats[6]
-let icecreambarn = eats[7]
-let mainstcafe = eats[8]
-let robinsnest = eats[9]
-let servicestation = eats[10]
-let lightburns = eats[11]
-let flyingdogsjl = eats[12]
+// SETTING UP VARIABLES TO RECOGNIZE RESTAURANTS AS THEIR NAMES FROM "eats" above ^^^
+function restaurantVariables() {
+  let giovannis = eats[0];
+  let ginos = eats[1];
+  let thymebistro = eats[2];
+  let westforkeatery = eats[3];
+  let tlhotdogs = eats[4];
+  let flyingdogs = eats[5];
+  let donpatron = eats[6];
+  let icecreambarn = eats[7];
+  let mainstcafe = eats[8];
+  let robinsnest = eats[9];
+  let servicestation = eats[10];
+  let lightburns = eats[11];
+  let flyingdogsjl = eats[12];
+}
+restaurantVariables();
 
 // SETTING UP CONSTANTS TO BE USED IN APPLICATION BELOW    
-const WestonEats = eats.filter((eats) => {
-  return eats.city == 'Weston'
-})
-const JaneLewEats = eats.filter((eats) => {
-  return eats.city == 'Jane Lew'
-})
-const JLEatsNames = JaneLewEats.map((eats) => {
-  return eats.name
-})
-const WestonEatsNames = WestonEats.map((eats) => {
-  return eats.name
-})
-const eats2 = eats.filter((eats) => {
-  return eats.m
-})
-const keys = Object.values(JLEatsNames)
+const { WestonEats, JaneLewEats } = Constants();
+function Constants() {
+  const WestonEats = eats.filter((eats) => {
+    return eats.city == 'Weston';
+  });
+  const JaneLewEats = eats.filter((eats) => {
+    return eats.city == 'Jane Lew';
+  });
+  const JLEatsNames = JaneLewEats.map((eats) => {
+    return eats.name;
+  });
+  const WestonEatsNames = WestonEats.map((eats) => {
+    return eats.name;
+  });
+  const eats2 = eats.filter((eats) => {
+    return eats.m;
+  });
+  const keys = Object.values(JLEatsNames);
+  return { WestonEats, JaneLewEats };
+}
 
 //THIS FUNCTION CREATES THE HEADER "CONNECT LC ONLINE ORDERING SYSTEM COPYRIGHT APRIL 2020 JUSTIN WAUGH"
 function gen_HomeHeader() {
   document.write("<div id=\"HOMEheader\">")
   document.write("<center><h1>ConnectLC </h1>");
   document.write("<h2>ONLINE ORDERING SYSTEM</h2>");
-  document.write("<h6>&copy;April 2020 Justin Waugh</h6></center>");
   document.write("</div>");
 }
+
+function gen_Footer() {
+  document.write("<center><h5>&copy;April 2020 Justin Waugh</h5></center>");
+};
 
 // THIS FUNCTION WILL CHOOSE ONLY WESTON RESTAURANTS FROM THE CONSTANT 'eats' ON LINE #115
 function listallWestonrestaurants() {
@@ -261,10 +271,7 @@ function listallJLrestaurants() {
     }
 }
 
-                                /////   //////////////////////////////////////////////////////////  /////
-                                /////   THIS FUNCTION CREATES THE HTML FOR THE HOMEPAGE LAYOUT!!!   /////
-                                /////   //////////////////////////////////////////////////////////  /////
-
+/////   THIS FUNCTION CREATES THE HTML FOR THE HOMEPAGE LAYOUT!!!   /////
 function generate_homepage() {
 
     document.open();
@@ -276,26 +283,39 @@ function generate_homepage() {
     listallJLrestaurants();
     document.write("</center>")    
     document.write("</center></div>")
+    gen_Footer();
 }
 
 //////////////////////////////      ANYTHING HAPPENING BELOW HERE IS AFTER THE HOMEPAGE HAS BEEN GENERATED ABOVE    ////////////////////////
 
+//  THIS FUNCTION WILL CREATE A PAGE THAT SHOWS A GIOVANNIS MENU AND CONTACT INFORMATION
 function gen_GioPage() {
-  document.getElementById("HOMEeats").style.display="none";  //hides everything from the heading EATS
-  document.write("<div id=\"DIVGiovannis\">")
-  document.getElementById("DIVGiovannis").style.display="none"
+  function giohead() {
+    document.write("<div id=\"DIVGiovannis\">")
+    document.write("<center><h1>Welcome to Giovannis Online!</center>");
+    document.write("</div>")
+    
+
+  }
+  gen_HomeHeader();
+  giohead();
 }
+
 
 generate_homepage();
 
+//  THIS FUNCTION WILL RETURN AN ALERT AND CONSOLE LOG OF THE ITEM CHOSEN FROM THE WESTON SELECT LIST
 function WestonSelectMenu() {
    var selectBox = document.getElementById("WestonSelect");
    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-   alert(selectedValue);
+   //alert(selectedValue);
    selectedValueURLified = selectedValue.replace(/['&"]+/g, '')
    cl(selectedValueURLified,'_self');
    var Weston2 = document.getElementById("WestonMenuSelect")
-   Weston2.style.display = "none";   
+    if (selectedValueURLified == "Giovannis") {
+       // document.close();
+        gen_GioPage();
+    }  
 }
 
 function JLSelectMenu() {
@@ -309,10 +329,10 @@ function JLMenuCreation() {
   cl('')
   cl('------------------------------------------------------') 
   const EarlyMorninFixins = giomenu_early_mornin_fixins.map((giomenu_early_mornin_fixins) => {
-    return giomenu_early_mornin_fixins.name })
-    document.write()
+    return giomenu_early_mornin_fixins.name });
+    //document.write(giomenu_early_mornin_fixins[0].title);
   
-    cl(giomenu_early_mornin_fixins[0].title)
+    cl(giomenu_early_mornin_fixins[0].title);
   
     for (let prop in giomenu_early_mornin_fixins) {
     //cl(EarlyMorninFixins[prop])
@@ -342,11 +362,3 @@ function MenuCreation() {
  //cl('------------------------------------------------------')
  cl('MenuCreation() Ended!')
 }
-
-//document.write(giovannismenu)
-
-MenuCreation();
-
-//cl(typeof giomenu);
-//cl(giomenu_early_mornin_fixins)
-//cl(giomenu_shared_plates)
