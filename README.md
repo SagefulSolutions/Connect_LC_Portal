@@ -1,8 +1,9 @@
-# Connect LC Portal
+# Connect WV Portal
 
-## ConnectLC Portal should enable the people of Lewis County, West Virginia to interact with other citizens, businesses and government agencies.
+## ConnectWV Portal should enable the people of Lewis County, West Virginia to interact with other citizens, businesses and government agencies.
 
 ## Milestones:
+### Get Lewis County set up first thing
 ### Online ordering is first on the agenda.
 ### Directory of businesses in the area
 ### Pay Municipal Taxes
