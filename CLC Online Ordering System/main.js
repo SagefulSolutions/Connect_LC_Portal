@@ -314,7 +314,7 @@ function gen_GioPage() {
   
 }
 
-
+OrderingSystem.ConfirmOrder();
 generate_homepage();
 
 //  THIS FUNCTION WILL RETURN AN ALERT AND CONSOLE LOG OF THE ITEM CHOSEN FROM THE WESTON SELECT LIST
