@@ -47,4 +47,4 @@ function OrderingSystem() {
 }
 
 ConfirmOrder();
-ConfirmOrder.ConfirmOrder();
+OrderingSystem.ConfirmOrder();
