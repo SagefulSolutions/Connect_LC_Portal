@@ -266,7 +266,7 @@ function MenuCreation() {
   for (let item in giomenu_early_mornin_fixins) {
     if (EarlyMorninFixins[item] != undefined) {
       prices = giomenu_early_mornin_fixins[item].price
-      document.write(EarlyMorninFixins[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" id=\"emfixins_"+item+"\"></input>"+EarlyMorninFixins[item]+" ... "+prices)
       document.write("<br />")
     }
   }
@@ -278,7 +278,7 @@ function MenuCreation() {
   for (let item in giomenu_early_mornin_fixins) {
     if (SharedPlates[item] != undefined) {
       prices = giomenu_shared_plates[item].price
-      document.write(SharedPlates[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" id=\"sharedplates_"+item+"\"></input>"+SharedPlates[item]+" ... "+prices)
       document.write("<br />")
     }
   }
@@ -290,7 +290,7 @@ function MenuCreation() {
   for (let item in giomenu_early_mornin_fixins) {
     if (FarmToTableBurgers[item] != undefined) {
       prices = giomenu_farm_to_table_burgers[item].price
-      document.write(FarmToTableBurgers[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" id=\"f2tburgers_"+item+"\"></input>"+FarmToTableBurgers[item]+" ... "+prices)
       document.write("<br />")
     }
   }  
@@ -302,7 +302,7 @@ function MenuCreation() {
   for (let item in giomenu_sides) {
     if (SharedPlates[item] != undefined) {
       prices = giomenu_sides[item].price
-      document.write(Sides[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" id=\"sides_"+item+"\"></input>"+Sides[item]+" ... "+prices)
       document.write("<br />")
     }
   }  
@@ -316,7 +316,7 @@ function MenuCreation() {
   for (let item in giomenu_salads) {
     if (Salads[item] != undefined) {
       prices = giomenu_salads[item].price
-      document.write(Salads[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" id=\"salads_"+item+"\"></input>"+Salads[item]+" ... "+prices)
       document.write("<br />")
     }
   }  
@@ -330,7 +330,7 @@ function MenuCreation() {
   for (let item in giomenu_dinn_dinn) {
     if (DinnDinn[item] != undefined) {
       prices = giomenu_dinn_dinn[item].price
-      document.write(DinnDinn[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" id=\"dinndinn_"+item+"\"></input>"+DinnDinn[item]+" ... "+prices)
       document.write("<br />")
     }
   }
@@ -342,7 +342,7 @@ function MenuCreation() {
   for (let item in giomenu_farm_and_sea) {
     if (FarmandSea[item] != undefined) {
       prices = giomenu_farm_and_sea[item].price
-      document.write(FarmandSea[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" id=\"farmsea_"+item+"\"></input>"+FarmandSea[item]+" ... "+prices)
       document.write("<br />")
     }
   }
@@ -355,7 +355,7 @@ function MenuCreation() {
     num = 0
     if (Sammiches[item] != undefined) {
       prices = giomenu_sammiches[item].price
-      document.write("<input type=\"checkbox\" id=\"sam_"+item+"\"></input>"+Sammiches[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" id=\"sammiches_"+item+"\"></input>"+Sammiches[item]+" ... "+prices)
       document.write("<br />")  
     }
     num = num+1
