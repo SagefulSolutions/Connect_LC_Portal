@@ -342,7 +342,7 @@ function MenuCreation() {
     num = 0
     if (Sammiches[item] != undefined) {
       prices = giomenu_sammiches[item].price
-      document.write("<input type=\"checkbox\" id=\"sammiches_"+item+"\"></input>"+Sammiches[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" id=\"\""+Sammiches[item]+"\"></input>"+Sammiches[item]+" ... "+prices)
       document.write("<br />")  
     }
     num = num+1
