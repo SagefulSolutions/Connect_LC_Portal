@@ -46,5 +46,5 @@ function OrderingSystem() {
   OrderingSystem.ConfirmOrder = ConfirmOrder;
 }
 
-ConfirmOrder();
+OrderingSystem();
 OrderingSystem.ConfirmOrder();
