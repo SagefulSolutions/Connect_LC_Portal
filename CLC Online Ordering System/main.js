@@ -1,19 +1,6 @@
 //  FORMS THE DATABASE THAT STORES ALL INFO FOR THE APPLICATION TO FUNCTION. FROM RESTAURANTS DOWN TO THEIR MENUS AND PRICING.
 //  IT FEELS LIKE THIS SHOULD BE STORED ELSEWHERE, BUT I DON'T KNOW HOW TO DO THAT AND CALL IT INTO THIS FILE. SOMETHING TO LEARN LATER.
 
-function include(file) { 
-  
-  var script  = document.createElement('script'); 
-  script.src  = file; 
-  script.type = 'text/javascript'; 
-  script.defer = true; 
-  
-  document.getElementsByTagName('head').item(0).appendChild(script); 
-  
-} 
-
-include('giomenu.js')
-include('OrderingSystem.js')
 
 cl = console.log
 
