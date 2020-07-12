@@ -43,5 +43,8 @@ function OrderingSystem() {
     console.log("IssueReceipt() called")
   }
 
-  OrderingSystem.ConfirmOrder = ConfirmOrder
+  OrderingSystem.ConfirmOrder = ConfirmOrder;
 }
+
+ConfirmOrder();
+ConfirmOrder.ConfirmOrder();
