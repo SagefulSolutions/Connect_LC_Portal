@@ -368,7 +368,7 @@ function MenuCreation() {
   for (let item in giomenu_pizza_and_calzones) {
     if (PizzaCalzones[item] != undefined) {
       prices = giomenu_pizza_and_calzones[item].price
-      document.write(PizzaCalzones[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" id=\"pizzacalzones_"+item+"\"></input>"+PizzaCalzones[item]+" ... "+prices)
       document.write("<br />")
     }
   }
