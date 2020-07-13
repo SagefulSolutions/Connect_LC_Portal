@@ -1,5 +1,19 @@
 function OrderingSystem() {
   
+    function myFunction() {
+        // Get the checkbox
+        var checkBox = document.getElementById("myCheck");
+        // Get the output text
+        var text = document.getElementById("text");
+      
+        // If the checkbox is checked, display the output text
+        if (checkBox.checked == true){
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+      }
+
   // Login so that payment information can be saved for later
     // Also should consider using a cookie or somethign to keep logged in??
   function AuthenticateUser(){
@@ -15,19 +29,6 @@ function OrderingSystem() {
   function RestaurantMenuDisplay() {
     console.log("RestaurantMenuDisplay() called")
     
-    function myFunction() {
-        // Get the checkbox
-        var checkBox = document.getElementById("myCheck");
-        // Get the output text
-        var text = document.getElementById("text");
-      
-        // If the checkbox is checked, display the output text
-        if (checkBox.checked == true){
-          text.style.display = "block";
-        } else {
-          text.style.display = "none";
-        }
-      }
     // Make sure a notes section is available to user to add special instructions to cook, delivery driver, etc.
   }
   
