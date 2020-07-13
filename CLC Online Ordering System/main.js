@@ -226,7 +226,7 @@ function WestonSelectMenu() {
    var Weston2 = document.getElementById("WestonMenuSelect")
     if (selectedValueURLified == "Giovannis") {
        // document.close();
-       document.open("gio.html");
+       document.open("restaurants/gio.html");
        //gen_GioPage();
     }  
 }
