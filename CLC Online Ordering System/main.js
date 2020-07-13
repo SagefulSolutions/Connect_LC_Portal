@@ -122,7 +122,7 @@ function gen_HomeHeader() {
 }
 
 function gen_Footer() {
-  document.write("<center><h5>&copy;April 2020 Justin Waugh</h5></center>");
+  document.write("<center><h5>&copy;July 2020 Justin Waugh</h5></center>");
 };
 
 // THIS FUNCTION WILL CHOOSE ONLY WESTON RESTAURANTS FROM THE CONSTANT 'eats' ON LINE #115
@@ -178,7 +178,15 @@ function generate_homepage() {
     gen_Footer();
 }
 
-//////////////////////////////      ANYTHING HAPPENING BELOW HERE IS AFTER THE HOMEPAGE HAS BEEN GENERATED ABOVE    ////////////////////////
+generate_homepage();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////      ANYTHING HAPPENING BELOW HERE IS AFTER THE HOMEPAGE HAS BEEN GENERATED ABOVE     ///////////////////////
+//////////////////////////////      ----------------------------------------------------------------------------     ///////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //  THIS FUNCTION WILL CREATE A PAGE THAT SHOWS A GIOVANNIS MENU AND CONTACT INFORMATION
 function gen_GioPage() {
@@ -200,8 +208,8 @@ function gen_GioPage() {
   
 }
 
-OrderingSystem.ConfirmOrder();
-generate_homepage();
+//OrderingSystem.ConfirmOrder();
+
 
 //  THIS FUNCTION WILL RETURN AN ALERT AND CONSOLE LOG OF THE ITEM CHOSEN FROM THE WESTON SELECT LIST
 function WestonSelectMenu() {
@@ -242,14 +250,15 @@ function JLMenuCreation() {
  cl('MenuCreation() Ended!')
 }
 
-//gen_GioPage();
-//
+
 function MenuCreation() {
   
   const EarlyMorninFixins = giomenu_early_mornin_fixins.map((giomenu_early_mornin_fixins) => {
     return giomenu_early_mornin_fixins.name
   })   
-    document.write("<u><h3>"+giomenu_early_mornin_fixins[0].title+"</h3></u>")  
+   
+  document.write("<u><h3>"+giomenu_early_mornin_fixins[0].title+"</h3></u>")  
+  
   for (let item in giomenu_early_mornin_fixins) {
     if (EarlyMorninFixins[item] != undefined) {
       prices = giomenu_early_mornin_fixins[item].price
@@ -261,7 +270,9 @@ function MenuCreation() {
   const SharedPlates = giomenu_shared_plates.map((giomenu_shared_plates) => {
     return giomenu_shared_plates.name
   })
+ 
   document.write("<u><h3>"+giomenu_shared_plates[0].title+"</h3></u>")
+  
   for (let item in giomenu_early_mornin_fixins) {
     if (SharedPlates[item] != undefined) {
       prices = giomenu_shared_plates[item].price
@@ -273,7 +284,9 @@ function MenuCreation() {
   const FarmToTableBurgers = giomenu_farm_to_table_burgers.map((giomenu_farm_to_table_burgers) => {
     return giomenu_farm_to_table_burgers.name
   })
+  
   document.write("<u><h3>"+giomenu_farm_to_table_burgers[0].title+"</h3></u>")
+  
   for (let item in giomenu_early_mornin_fixins) {
     if (FarmToTableBurgers[item] != undefined) {
       prices = giomenu_farm_to_table_burgers[item].price
@@ -285,7 +298,9 @@ function MenuCreation() {
   const Sides = giomenu_sides.map((giomenu_sides) => {
     return giomenu_sides.name
   })
+  
   document.write("<u><h3>"+giomenu_sides[0].title+"</h3></u>")
+  
   for (let item in giomenu_sides) {
     if (SharedPlates[item] != undefined) {
       prices = giomenu_sides[item].price
@@ -325,7 +340,9 @@ function MenuCreation() {
   const FarmandSea = giomenu_farm_and_sea.map((giomenu_farm_and_sea) => {
     return giomenu_farm_and_sea.name
   })
+  
   document.write("<u><h3>"+giomenu_farm_and_sea[0].title+"</h3></u>")
+  
   for (let item in giomenu_farm_and_sea) {
     if (FarmandSea[item] != undefined) {
       prices = giomenu_farm_and_sea[item].price
@@ -337,7 +354,9 @@ function MenuCreation() {
   const Sammiches = giomenu_sammiches.map((giomenu_sammiches) => {
     return giomenu_sammiches.name
   })
+  
   document.write("<u><h3>"+giomenu_sammiches[0].title+"</h3></u>")
+  
   for (let item in giomenu_sammiches) {
     num = 0
     if (Sammiches[item] != undefined) {
@@ -351,7 +370,9 @@ function MenuCreation() {
   const PizzaCalzones = giomenu_pizza_and_calzones.map((giomenu_pizza_and_calzones) => {
     return giomenu_pizza_and_calzones.name
   })
+  
   document.write("<u><h3>"+giomenu_pizza_and_calzones[0].title+"</h3></u>")
+  
   for (let item in giomenu_pizza_and_calzones) {
     if (PizzaCalzones[item] != undefined) {
       prices = giomenu_pizza_and_calzones[item].price
