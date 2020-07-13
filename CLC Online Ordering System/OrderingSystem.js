@@ -9,12 +9,13 @@ function OrderingSystem() {
   // Allow user to choose a restaurant to show a menu for
   function RestaurantPicker() {
     console.log("RestaurantPicker() called")
+    
   }
   
   // Display a menu for the restaurant that user chooses and allow user to choose items from menu
   function RestaurantMenuDisplay() {
     console.log("RestaurantMenuDisplay() called")
-    
+    document.write("<div class=\"row\"><div class=\"column\"></div><div class=\"column\"></div></div>");
     // Make sure a notes section is available to user to add special instructions to cook, delivery driver, etc.
   }
   
