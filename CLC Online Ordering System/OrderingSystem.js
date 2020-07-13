@@ -15,7 +15,8 @@ function OrderingSystem() {
   // Display a menu for the restaurant that user chooses and allow user to choose items from menu
   function RestaurantMenuDisplay() {
     console.log("RestaurantMenuDisplay() called")
-     // Make sure a notes section is available to user to add special instructions to cook, delivery driver, etc.
+    document.write("<div class=\"row\"><div class=\"column\" style=\"background-color:#aaa;\"><h2>Column 1</h2><p>Some text..</p></div><div class=\"column\" style=\"background-color:#bbb;\"><h2>Column 2</h2><p>Some text..</p></div></div>");
+    // Make sure a notes section is available to user to add special instructions to cook, delivery driver, etc.
   }
     
 
