@@ -226,7 +226,8 @@ function WestonSelectMenu() {
    var Weston2 = document.getElementById("WestonMenuSelect")
     if (selectedValueURLified == "Giovannis") {
        // document.close();
-        gen_GioPage();
+       document.open("gio.html");
+       //gen_GioPage();
     }  
 }
 
