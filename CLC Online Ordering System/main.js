@@ -284,7 +284,7 @@ function MenuCreation() {
     if (SharedPlates[item] != undefined) {
       prices = giomenu_shared_plates[item].price
       document.write("<input type=\"checkbox\" onclick=\"updateCheckBoxes()\" class=\"menuitemcheckbox\" id=\"sharedplates_"+item+"\" name=\""+SharedPlates[item]+"\"></input>"+SharedPlates[item]+" ... "+prices)
-      document.write("<br />")
+      document.write("<br />");
     }
   }
 
