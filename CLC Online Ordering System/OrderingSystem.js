@@ -14,6 +14,20 @@ function OrderingSystem() {
   // Display a menu for the restaurant that user chooses and allow user to choose items from menu
   function RestaurantMenuDisplay() {
     console.log("RestaurantMenuDisplay() called")
+    
+    function myFunction() {
+        // Get the checkbox
+        var checkBox = document.getElementById("myCheck");
+        // Get the output text
+        var text = document.getElementById("text");
+      
+        // If the checkbox is checked, display the output text
+        if (checkBox.checked == true){
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+      }
     // Make sure a notes section is available to user to add special instructions to cook, delivery driver, etc.
   }
   
