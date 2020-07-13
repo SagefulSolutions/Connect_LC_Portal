@@ -44,7 +44,12 @@ let eats = [
   {
     name: 'Kathy\'s Ice Cream Barn',
     city: 'Weston',
-    category: ""
+    category: "Ice Cream & Home Cooking"
+  },
+  {
+    name: 'Cookie\'s Corner',
+    city: 'Weston',
+    category: "Ice-Cream"
   },
   {
     name: 'Main Street Cafe',
