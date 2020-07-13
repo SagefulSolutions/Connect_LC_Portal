@@ -56,7 +56,7 @@ function myFunction() {
     var checkBox = document.getElementById("myCheck");
     // Get the output text
     var text = document.getElementById("text");
-    var checkedBoxes = document.querySelectorAll('input:checked');
+    
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){
       text.style.display = "block";
