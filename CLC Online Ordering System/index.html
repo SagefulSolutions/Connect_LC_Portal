@@ -8,14 +8,21 @@
 </head>
 <body>
     <style>
+        * {
+          box-sizing: border-box;
+        }
+        
         .row {
-            display: flex;
-            }
-
+          display: flex;
+        }
+        
+        /* Create two equal columns that sits next to each other */
         .column {
-            flex: 50%;
-            }
-    </style>
+          flex: 50%;
+          padding: 10px;
+          height: 300px; /* Should be removed. Only for demonstration */
+        }
+        </style>
 
     <script src="OrderingSystem.js"></script>
     <script src="main.js"></script>
