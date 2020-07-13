@@ -19,8 +19,7 @@ function OrderingSystem() {
     // Make sure a notes section is available to user to add special instructions to cook, delivery driver, etc.
     OrderingSystem.RestaurantMenuDisplay = RestaurantMenuDisplay
   }
-  RestaurantMenuDisplay();
-  
+
   // Show order to verify correct. Use a large "Complete Order" button at bottom to finish ordering process
   function ConfirmOrder() {
     console.log("ConfirmOrder() called")
