@@ -269,7 +269,7 @@ function MenuCreation() {
   for (let item in giomenu_early_mornin_fixins) {
     if (EarlyMorninFixins[item] != undefined) {
       prices = giomenu_early_mornin_fixins[item].price
-      document.write("<input type=\"checkbox\" onclick=\"updateCheckBoxes\" class=\"menuitemcheckbox\" id=\"emfixins_"+item+"\"></input>"+EarlyMorninFixins[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" onclick=\"updateCheckBoxes()\" class=\"menuitemcheckbox\" id=\"emfixins_"+item+"\"></input>"+EarlyMorninFixins[item]+" ... "+prices)
       document.write("<br />")
     }
   }
