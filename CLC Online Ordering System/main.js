@@ -135,9 +135,9 @@ function listallWestonrestaurants() {
   document.write("<strong>Weston has the following restaurant options.</strong>");
   document.write("<br /> Please choose the one you'd like to see a menu for");
   document.write("<br />");
-  document.write("<select id=\"WestonSelect\" size=\"8\" onchange=\"WestonSelectMenu();\"></select>");
+  document.write("<select id=\"WestonSelect\" size=\"9\" onchange=\"WestonSelectMenu();\"></select>");
   document.write("==>")
-  document.write("<select id=\"WestonMenuSelect\" size=\"8\" onchange=\"CALL_A_FUNCTION_HERE();\"></select>");
+  document.write("<select id=\"WestonMenuSelect\" size=\"9\" onchange=\"CALL_A_FUNCTION_HERE();\"></select>");
   cl('listallWestonRestaurants Triggered! You should have a nice selectable list!');
   for (key of WestonEats) {
     let restName = key.name
