@@ -67,5 +67,4 @@ function myFunction() {
 
 function updateCheckBoxes(){
     checkedBoxes = document.querySelectorAll('input:checked');
-    console.log(checkedBoxes)
 }
