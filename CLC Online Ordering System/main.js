@@ -383,7 +383,7 @@ function MenuCreation() {
   for (let item in giomenu_pizza_and_calzones) {
     if (PizzaCalzones[item] != undefined) {
       prices = giomenu_pizza_and_calzones[item].price
-      document.write("<input type=\"checkbox\" onclick=\"updateCheckBoxes()\" class=\"menuitemcheckbox\" id=\"pizzacalzones_"+item+"\"" name=\""+PizzaCalzones[item]+"\"></input>"+PizzaCalzones[item]+" ... "+prices)
+      document.write("<input type=\"checkbox\" onclick=\"updateCheckBoxes()\" class=\"menuitemcheckbox\" id=\"pizzacalzones_"+item+"\ name=\""+PizzaCalzones[item]+"\"></input>"+PizzaCalzones[item]+" ... "+prices)
       document.write("<br />")
     }
   }
