@@ -169,8 +169,8 @@ function listallJLrestaurants() {
     }
 }
 
-/////   THIS FUNCTION CREATES THE HTML FOR THE HOMEPAGE LAYOUT!!!   /////
-function generate_homepage() {
+
+function generate_homepage() { //   THIS FUNCTION CREATES THE HTML FOR THE HOMEPAGE LAYOUT!!!
 
     document.open();
     gen_HomeHeader();
@@ -186,16 +186,10 @@ function generate_homepage() {
 
 //generate_homepage();
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////      ANYTHING HAPPENING BELOW HERE IS AFTER THE HOMEPAGE HAS BEEN GENERATED ABOVE     ///////////////////////
-//////////////////////////////      ----------------------------------------------------------------------------     ///////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//  THIS FUNCTION WILL CREATE A PAGE THAT SHOWS A GIOVANNIS MENU AND CONTACT INFORMATION
-function gen_GioPage() {
+
+function gen_GioPage() { // Generates HTML for giovanni's page THAT SHOWS A GIOVANNIS MENU AND CONTACT INFORMATION
  
   function giohead() {
     document.write("<div id=\"DIVGiovannis\">")
@@ -217,8 +211,7 @@ function gen_GioPage() {
 //OrderingSystem.ConfirmOrder();
 
 
-//  THIS FUNCTION WILL RETURN AN ALERT AND CONSOLE LOG OF THE ITEM CHOSEN FROM THE WESTON SELECT LIST
-function WestonSelectMenu() {
+function WestonSelectMenu() { //  THIS FUNCTION WILL RETURN AN ALERT AND CONSOLE LOG OF THE ITEM CHOSEN FROM THE WESTON SELECT LIST
    var selectBox = document.getElementById("WestonSelect");
    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
    //alert(selectedValue);
@@ -232,14 +225,14 @@ function WestonSelectMenu() {
     }  
 }
 
-function JLSelectMenu() {
+function JLSelectMenu() { // Alerts the name of the restaurant when selected
   var selectBox = document.getElementById("JLSelect");
   var selectedValue = selectBox.options[selectBox.selectedIndex].value;
   alert(selectedValue);
 }
 
-function JLMenuCreation() {
-  cl('MenuCreation Triggered!'); 
+function JLMenuCreation() { // Creates listings for Jane Lew restaurants ONLY
+  cl('MenuCreation Triggered!');  
   cl('')
   cl('------------------------------------------------------') 
   const EarlyMorninFixins = giomenu_early_mornin_fixins.map((giomenu_early_mornin_fixins) => {
@@ -258,7 +251,7 @@ function JLMenuCreation() {
 }
 
 
-function MenuCreation() {
+function MenuCreation() { // Giovanni's Menu
   
   const EarlyMorninFixins = giomenu_early_mornin_fixins.map((giomenu_early_mornin_fixins) => {
     return giomenu_early_mornin_fixins.name
